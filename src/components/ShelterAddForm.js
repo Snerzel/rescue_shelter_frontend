@@ -17,6 +17,9 @@ class ShelterAddForm extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addShelter(this.state)
+        this.setState({
+            kind: ''
+        })
     }
 
     render() {

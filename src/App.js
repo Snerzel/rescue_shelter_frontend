@@ -6,9 +6,9 @@ import SheltersContainer from './containers/SheltersContainer';
 
 class App extends React.Component {
 
-  componentDidMount() {
-    this.props.fetchShelters()
-  }
+  // componentDidMount() {
+  //   this.props.fetchShelters()
+  // }
   
   
 

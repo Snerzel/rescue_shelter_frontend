@@ -1,10 +1,11 @@
 import React from "react";
+import Shelter from './Shelter'
 
 const Shelters = (props) => {
 
     return (
         <div>
-            {props.shelters.map(shelter => <li key={shelter.id}>{shelter.kind}</li> )}
+            {props.shelters.map(shelter => <div key={shelter.id}><Shelter shelter={shelter}/></div> )}
         </div>
     )
 }
