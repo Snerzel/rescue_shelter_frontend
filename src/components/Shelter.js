@@ -1,16 +1,22 @@
 import React from "react";
+import {Redirect} from 'react-router-dom';
+import AnimalsContainer from "../containers/AnimalsContainer";
 
 const Shelter = (props) => {
 
     console.log(props)
 
     let shelter = props.shelters[props.match.params.id - 1]
-
+    // let shelter = props.shelters.filter(shelter => shelter.id == props.match.params.id)[0]
     return (
-        <li>
-            {shelter ? shelter.kind : null}
-            {/* {props.shelter.kind} */}
-        </li>
+        <div>
+            <h3>
+                {shelter ? null : <Redirect to='/shelters'/>}
+                {shelter ? shelter.kind : null}
+                
+            </h3>
+            <AnimalsContainer shelter={shelter}/>
+        </div>
     )
 }
 
