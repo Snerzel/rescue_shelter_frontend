@@ -1,12 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
+import { deleteAnimal } from "../actions/deleteAnimal";
 
-const Animals = (props) => {
+class Animals extends React.Component {
 
-    return (
+    handleDelete = (animal) => {
+        this.props.deleteAnimal(animal.id, animal.shelter_id)
+      }
+    render(){
+        return (
+
         <dive>
-            Animals
+            {this.props.animals && this.props.animals.map(animal =>
+                <li key={animal.id}>{animal.kind} - {animal.availability} - {animal.age} - {animal.name} - {animal.info}<button onClick={() => this.handleDelete(animal)}>Delete</button> </li>
+                )}
         </dive>
     )
+    }
 }
 
-export default Animals
+export default connect(null, {deleteAnimal})(Animals)
