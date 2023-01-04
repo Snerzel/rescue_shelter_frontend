@@ -5,6 +5,7 @@ import Shelters from "../components/Shelters";
 import Shelter from "../components/Shelter";
 import ShelterAddForm from "../components/ShelterAddForm";
 import {fetchShelters} from "../actions/fetchShelters";
+import NavBar from '../components/NavBar'
 
 class SheltersContainer extends React.Component {
 
@@ -15,6 +16,7 @@ class SheltersContainer extends React.Component {
     render() {
         return(
             <div>
+                <NavBar/>
                 <Switch>
                     <Route path='./shelter/new' component={ShelterAddForm}/>
                     <Route path='./shelters/:id'  render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters} /> } />

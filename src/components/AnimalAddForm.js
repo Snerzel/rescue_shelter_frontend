@@ -56,4 +56,4 @@ class AnimalAddForm extends React.Component {
     }
 }
 
-export default connect(null, addAnimal)(AnimalAddForm)
+export default connect(null, {addAnimal})(AnimalAddForm)

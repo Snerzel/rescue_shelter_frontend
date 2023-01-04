@@ -6,7 +6,9 @@ const Shelters = (props) => {
 
     return (
         <div>
-            {props.shelters.map(shelter => <div key={shelter.id}><Link to={'/shelters/${shelter.id}'}>{shelter.kind}</Link></div> )}
+            {props.shelters.map(shelter =>
+                 <div key={shelter.id}>
+                    <Link to={`/shelters/${shelter.id}`}>{shelter.kind}</Link></div> )}
         </div>
     )
 }
