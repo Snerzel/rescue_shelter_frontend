@@ -4,6 +4,8 @@ import { deleteAnimal } from "../actions/deleteAnimal";
 
 class Animals extends React.Component {
 
+    
+
     handleDelete = (animal) => {
         this.props.deleteAnimal(animal.id, animal.shelter_id)
       }

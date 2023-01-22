@@ -1,5 +1,5 @@
 import React from "react";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from "react-router-dom";
 import AnimalsContainer from "../containers/AnimalsContainer";
 
 const Shelter = (props) => {
@@ -11,11 +11,12 @@ const Shelter = (props) => {
     return (
         <div>
             <h3>
-                {shelter ? null : <Redirect to='/shelters'/>}
+                {/* {shelter ? null : <Redirect to='/shelters'/>} */}
                 {shelter ? shelter.kind : null}
                 
                 
             </h3>
+            
             <AnimalsContainer shelter={shelter}/>
         </div>
     )

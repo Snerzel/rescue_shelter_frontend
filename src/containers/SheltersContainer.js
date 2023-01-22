@@ -18,7 +18,7 @@ class SheltersContainer extends React.Component {
             <div>
                 <NavBar/>
                 <Switch>
-                    <Route path='./shelter/new' component={ShelterAddForm}/>
+                    <Route path='/shelters/new' component={ShelterAddForm}/>
                     <Route path='./shelters/:id'  render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters} /> } />
                     <Route exact path='/shelters' render={(routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
                     

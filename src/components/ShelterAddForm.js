@@ -9,6 +9,7 @@ class ShelterAddForm extends React.Component {
     handleChange = (event) => {
         this.setState({
             kind: event.target.value
+            // [event.target.kind]: event.target.value
         }
 
         )
