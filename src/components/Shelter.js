@@ -7,7 +7,8 @@ const Shelter = (props) => {
     
 
     // let shelter = props.shelters[props.match.params.id - 1]
-    let shelter = props.shelters.filter(shelter => shelter.id === props.match.params.id)[0]
+    let shelter = props.shelters.filter(shelter => shelter.id === parseInt(props.match.params.id))[0]
+    console.log(shelter)
     return (
         <div>
             <h3>

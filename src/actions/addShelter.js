@@ -10,7 +10,7 @@ export const addShelter = (data) => {
 
         })
         .then(response => response.json())
-        .than(shelter => dispatch({type: 'NEW_SHELTER', payload: shelter}))
+        .then(shelter => dispatch({type: 'NEW_SHELTER', payload: shelter}))
     }
     
 }

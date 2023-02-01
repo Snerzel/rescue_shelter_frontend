@@ -46,8 +46,8 @@ class AnimalAddForm extends React.Component {
                     <input type="text" name="info" value={this.state.info} onChange={this.handleChange}/>
                     <label>Available for Adoption:</label>
                     <select name="availability" value={this.state.availability} onChange={this.handleChange}>
-                        <options>yes</options>
-                        <options>no</options>
+                        <option>yes</option>
+                        <option>no</option>
                     </select>
                     <input type="submit"/>
                 </form>

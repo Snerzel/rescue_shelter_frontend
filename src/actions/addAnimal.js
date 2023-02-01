@@ -12,6 +12,6 @@ export const addAnimal = (animal, shelterId) => {
 
         )
         .then(response => response.json())
-        .than(shelter => dispatch({type: 'ADD_ANIMAL', payload: shelter}))
+        .then(shelter => dispatch({type: 'ADD_ANIMAL', payload: shelter}))
     }
 }
