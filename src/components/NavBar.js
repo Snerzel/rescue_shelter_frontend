@@ -5,6 +5,7 @@ const NavBar = (props) => {
 
   return (
     <div>
+      <Link to='/' style={{paddingRight: '10px'}}>Home </Link>
       <Link to='/shelters' style={{paddingRight: '10px'}}>Shelters  </Link>
       <Link to='/shelters/new'> Add new shelter type</Link>
       

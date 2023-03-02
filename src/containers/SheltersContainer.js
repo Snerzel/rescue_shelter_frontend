@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { Route, Switch } from "react-router-dom";
 import Shelters from "../components/Shelters";
 import Shelter from "../components/Shelter";
+import Home from "../components/Home";
 import ShelterAddForm from "../components/ShelterAddForm";
 import {fetchShelters} from "../actions/fetchShelters";
 import NavBar from '../components/NavBar'
@@ -18,6 +19,7 @@ class SheltersContainer extends React.Component {
             <div>
                 <NavBar/>
                 <Switch>
+                    <Route exact path='/' component={Home}/>
                     <Route exact path='/shelters/new' component={ShelterAddForm}/>
                     <Route exact path='/shelters/:id'  render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters} /> } />
                     <Route exact path='/shelters' render={(routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />

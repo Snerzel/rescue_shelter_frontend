@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import {connect} from 'react-redux'
 import SheltersContainer from './containers/SheltersContainer';
-import Home from './components/Home';
+import Header from './components/Header';
 
 class App extends React.Component {
 
@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Home/>
+        <Header/>
         <SheltersContainer/>
       </div>
     );
