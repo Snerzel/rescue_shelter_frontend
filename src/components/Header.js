@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 const Header = ({props}) => {
     return (
         <div>
-            <h2>Mock Valley Rescue Shelter</h2>
+            <h2 style={{color: "blue"}}>Mock Valley Rescue Shelter</h2>
              
         </div>
     )
