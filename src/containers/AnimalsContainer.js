@@ -12,6 +12,7 @@ class AnimalsContainer extends React.Component {
         return (
             <div>
                 <AnimalAddForm shelter={this.props.shelter}/>
+                <br></br>
                 <Animals animals={this.props.shelter && this.props.shelter.animals}/>
                 
             </div>

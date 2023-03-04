@@ -1,6 +1,5 @@
 import React from "react";
-import {Route, Link} from 'react-router-dom';
-import Shelter from './Shelter'
+import { Link} from 'react-router-dom';
 import { connect } from "react-redux";
 import { deleteShelter } from "../actions/deleteShelter";
 

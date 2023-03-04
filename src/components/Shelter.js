@@ -12,7 +12,7 @@ const Shelter = (props) => {
     return (
         <div>
             <h3>
-                {/* {shelter ? null : <Redirect to='/shelters'/>} */}
+                {shelter ? null : <Redirect to='/shelters'/>}
                 {shelter ? shelter.kind : null}
                 
                 
