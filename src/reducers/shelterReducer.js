@@ -5,6 +5,8 @@ export default function shelterReducer(state = {shelters: []}, action) {
             return {shelters: action.payload}
         case 'NEW_SHELTER':
             return {...state, shelters: [...state.shelters, action.payload]}
+        case 'DELETE_SHELTER':
+            return {...state, shelters: [...state.shelters.filter(shelter => shelter.id !== action.payload.id)]}
         case 'ADD_ANIMAL':
             let shelters = state.shelters.map(shelter => {
                 if (shelter.id === action.payload.id) {
