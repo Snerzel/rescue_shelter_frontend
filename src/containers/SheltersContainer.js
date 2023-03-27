@@ -36,4 +36,10 @@ const mapStateToProps = state => {
     }
 }
 
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         fetchShelters: () => dispatch(fetchShelters())
+//     }
+// }
+
 export default connect(mapStateToProps, {fetchShelters})(SheltersContainer)

@@ -13,14 +13,19 @@ class ShelterAddForm extends React.Component {
         }
 
         )
+        console.log(this.state.kind)
     }
 
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addShelter(this.state)
-        this.setState({
-            kind: ''
-        })
+        if (this.state.kind === "") {
+            alert("Text field cannot be empty!")
+        }else{
+            this.props.addShelter(this.state)
+            this.setState({
+                kind: ''
+            })
+        }
     }
 
     render() {

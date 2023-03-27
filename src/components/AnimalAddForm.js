@@ -22,14 +22,18 @@ class AnimalAddForm extends React.Component {
 
       handleSubmit = (event) => {
         event.preventDefault()
-        this.props.addAnimal(this.state, this.props.shelter.id)
-        this.setState({
-          kind: '',
-          name: '',
-          age: '',
-          info: '',
-          availability: 'no'
-        })
+        if (this.state.name === "") {
+          alert("Please fill out the form more!")
+        }else{
+          this.props.addAnimal(this.state, this.props.shelter.id)
+          this.setState({
+            kind: '',
+            name: '',
+            age: '',
+            info: '',
+            availability: 'no'
+          })
+       }
       }
 
     render() {
